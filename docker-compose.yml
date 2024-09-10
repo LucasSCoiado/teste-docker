@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: thirsty_goldberg
+    environment:
+      - POSTGRES_PASSWORD: lucas
+      - POSTGRES_USER: postgres
+      - POSTGRES_DB: aluguel_carros
+    ports:
+      - "5432:5432"
+    volumes:          
+      - ./storage/database:/var/lib/postgresql/data
+    
